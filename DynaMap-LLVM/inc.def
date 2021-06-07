@@ -1,0 +1,25 @@
+#ifndef __INC_DEF__
+#define __INC_DEF__
+
+#define QUANT_LINE_SIZE_BITS (7)
+#define QUANT_LINE_SIZE (0x1 << QUANT_LINE_SIZE_BITS)
+
+#define CUDA_MALLOC_MANAGED_NANE "_ZL17cudaMallocManagedIfE9cudaErrorPPT_mj"
+#define STAT_TABLE_FUNC_NAME "_Z24mem_acc_stat_table_allocPmm"
+#define DEV_RECV_WITH_LINE_FUNC_NAME "_Z24deviceRecvWithLineAccNumPvii"
+#define THREAD_IDX_X_STR "__cuda_builtin_threadIdx_t17__fetch_builtin_xEv"
+#define BLOCK_IDX_X_STR "__cuda_builtin_blockIdx_t17__fetch_builtin_xEv"
+#define BLOCK_DIM_X_STR "__cuda_builtin_blockDim_t17__fetch_builtin_xEv"
+
+#define THREAD_IDX_Y_STR ""
+#define BLOCK_IDX_Y_STR "__cuda_builtin_blockIdx_t17__fetch_builtin_yEv"
+
+#define UVM_MAP_MEM_ACC_STAT_TABLE 99
+#define UVM_MAP_QUANT_TABLE 999
+#define UVM_PROFILE_ADDR 99999
+typedef struct {
+    uint64_t base __attribute__ ((aligned(8)));
+    uint64_t num;
+} uvm_params;
+
+#endif
